@@ -1,56 +1,126 @@
-# Welcome to your Expo app 👋
+# First Native App 📱
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern cross-platform mobile application built with **React Native**, **Expo SDK 57**, and **Expo Router**, styled using **NativeWind (Tailwind CSS)**.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
+- **File-Based Routing**: Clean and scalable navigation using [Expo Router](https://docs.expo.dev/router/introduction).
+- **Tab Navigation & Stack Navigation**:
+  - 🏠 **Home Dashboard**: Overview of metrics and recent activity.
+  - 📋 **Subscriptions**: Manage, view, and track recurring subscriptions and details.
+  - 📊 **Insights**: Visual analytics and spending breakdowns.
+  - ⚙️ **Settings**: User preferences and application configuration.
+- **Authentication Flows**: Dedicated auth layouts with Sign In and Sign Up screens.
+- **Onboarding Experience**: Smooth welcome flow for first-time users.
+- **Modern Styling**: Utility-first styling powered by NativeWind and Tailwind CSS.
+- **Cross-Platform Support**: Ready for iOS, Android, and Web with optimized performance.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Expo](https://expo.dev/) (SDK 57) / [React Native](https://reactnative.dev/)
+- **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [NativeWind](https://www.nativewind.dev/) / [Tailwind CSS](https://tailwindcss.com/)
+- **Animations & Gestures**: [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) & [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
+- **Icons & UI**: [Expo Symbols](https://docs.expo.dev/versions/latest/sdk/symbols/), [Expo Glass Effect](https://docs.expo.dev/), [Expo Image](https://docs.expo.dev/versions/latest/sdk/image/)
+
+---
+
+## 📁 Project Structure
+
+```text
+├── assets/                  # Static assets (images, fonts, splash screens)
+├── src/
+│   └── app/                 # Expo Router file-based screens and routes
+│       ├── (auth)/          # Authentication routes (Sign In, Sign Up)
+│       ├── (tabs)/          # Bottom tab navigation screens
+│       │   ├── index.tsx    # Home screen
+│       │   ├── subscriptions.tsx # Subscriptions list
+│       │   ├── subscription/     # Subscription detail routes
+│       │   ├── insights.tsx      # Spending & analytics insights
+│       │   └── settings.tsx      # Settings & profile
+│       ├── onboardingScreen.tsx  # Initial onboarding screen
+│       └── _layout.tsx      # Root application layout
+├── global.css               # Global Tailwind CSS styles
+├── babel.config.js          # Babel configuration
+├── metro.config.js          # Metro bundler config
+├── tailwind.config.js       # PostCSS / Tailwind CSS configuration
+├── app.json                 # Expo app configuration
+├── tsconfig.json            # TypeScript configuration
+└── package.json             # Dependencies and scripts
+```
+
+---
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) / [bun](https://bun.sh/)
+- [Expo Go](https://expo.dev/go) app on your mobile device (iOS / Android) or an emulator/simulator setup
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/first_native-app.git
+   cd first_native-app
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📱 Running the App
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Once the development server is running:
 
-## Get a fresh project
+- **iOS Simulator**: Press `i` in the terminal (macOS required).
+- **Android Emulator**: Press `a` in the terminal.
+- **Physical Device**: Scan the QR code in the terminal using the Expo Go app (Android) or Camera app (iOS).
+- **Web**: Press `w` in the terminal.
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 📜 Available Scripts
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+| Command | Description |
+|---|---|
+| `npx expo start` / `npm start` | Starts the Expo development bundler |
+| `npm run android` | Starts the app directly in an Android emulator/device |
+| `npm run ios` | Starts the app directly in an iOS simulator/device |
+| `npm run web` | Launches the web version of the application |
+| `npx expo lint` | Runs ESLint to check for code quality and style issues |
+| `npx tsc --noEmit` | Runs TypeScript type checking |
 
-### Other setup steps
+---
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## 🤝 Contributing
 
-## Learn more
+Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 📄 License
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the [MIT License](LICENSE).
