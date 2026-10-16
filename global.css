@@ -42,10 +42,12 @@
     .tabs-pill {
         @apply size-12 items-center justify-center rounded-full bg-transparent;
     }
-    .tab-active {
+    .tab-active,
+    .tabs-active {
         @apply bg-accent;
     }
-    .tabs-glyph {
+    .tabs-glyph,
+    .tabs-icon-image {
         @apply size-6;
     }
 }
